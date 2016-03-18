@@ -19,8 +19,8 @@
   '(("atom-one-light-accent"   . "#526FFF")
     ("atom-one-light-fg"       . "#383A42")
     ("atom-one-light-bg"       . "#FAFAFA")
-    ("atom-one-light-bg-1"     . "#121417")  ;; TODO
-    ("atom-one-light-bg-hl"    . "#2F343D")  ;; TODO
+    ("atom-one-light-bg-1"     . "#E5E5E6")  ;; MEBEE?
+    ("atom-one-light-bg-hl"    . "#CECECE")  ;; MEBEE?
     ("atom-one-light-mono-1"   . "#383A42")
     ("atom-one-light-mono-2"   . "#696C77")
     ("atom-one-light-mono-3"   . "#A0A1A7")
@@ -32,7 +32,7 @@
     ("atom-one-light-red-2"    . "#CA1243")
     ("atom-one-light-orange-1" . "#986801")
     ("atom-one-light-orange-2" . "#C18401")
-    ("atom-one-light-gray"     . "#3E4451")  ;; TODO
+    ("atom-one-light-gray"     . "#EDEDED")  ;; MEBEE?
     ("atom-one-light-silver"   . "#AAAAAA")  ;; TODO
     ("atom-one-light-black"    . "#0F1011")) ;; TODO
   "List of Atom One Light colors.")
