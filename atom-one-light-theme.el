@@ -16,25 +16,36 @@
   "Atom One Light - An Emacs port of the Atom One Light theme from Atom.io.")
 
 (defvar atom-one-light-colors-alist
-  '(("atom-one-light-accent"   . "#526FFF")
-    ("atom-one-light-fg"       . "#383A42")
-    ("atom-one-light-bg"       . "#FAFAFA")
-    ("atom-one-light-bg-1"     . "#E5E5E6")  ;; MEBEE?
-    ("atom-one-light-bg-hl"    . "#CECECE")  ;; MEBEE?
-    ("atom-one-light-mono-1"   . "#383A42")
-    ("atom-one-light-mono-2"   . "#696C77")
-    ("atom-one-light-mono-3"   . "#A0A1A7")
-    ("atom-one-light-cyan"     . "#0184BC")
-    ("atom-one-light-blue"     . "#4078F2")
-    ("atom-one-light-purple"   . "#A626A4")
-    ("atom-one-light-green"    . "#50A14F")
-    ("atom-one-light-red-1"    . "#E45649")
-    ("atom-one-light-red-2"    . "#CA1243")
-    ("atom-one-light-orange-1" . "#986801")
-    ("atom-one-light-orange-2" . "#C18401")
-    ("atom-one-light-gray"     . "#EDEDED")  ;; MEBEE?
-    ("atom-one-light-silver"   . "#AAAAAA")  ;; TODO
-    ("atom-one-light-black"    . "#0F1011")) ;; TODO
+  '(("atom-one-light-accent"        . "#526EFF")
+    ("atom-one-light-fg"            . "#383A42")
+    ("atom-one-light-bg"            . "#FAFAFA")
+    ("atom-one-light-bg-1"          . "#E5E5E6")  ;; MEBEE?
+    ("atom-one-light-bg-hl"         . "#F0F0F1")
+    ("atom-one-light-gutter"        . "#C2C2C3")
+    ("atom-one-light-insert"        . "#2DB448")
+    ("atom-one-light-change"        . "#F2A60D")
+    ("atom-one-light-info"          . "#1492FF")
+    ("atom-one-light-success"       . "#2DB448")
+    ("atom-one-light-warning"       . "#D5880B")
+    ("atom-one-light-error"         . "#F42A2A")
+    ("atom-one-light-delete"        . "#FF1414")
+    ("atom-one-light-mono-1"        . "#383A42")
+    ("atom-one-light-mono-2"        . "#696C77")
+    ("atom-one-light-mono-3"        . "#A0A1A7")
+    ("atom-one-light-cyan"          . "#0184BC")
+    ("atom-one-light-blue"          . "#4078F2")
+    ("atom-one-light-purple"        . "#A626A4")
+    ("atom-one-light-green"         . "#50A14F")
+    ("atom-one-light-red-1"         . "#E45649")
+    ("atom-one-light-red-2"         . "#CA1243")
+    ("atom-one-light-orange-1"      . "#B76B01")
+    ("atom-one-light-orange-2"      . "#CB7701")
+    ("atom-one-light-gray"          . "#E5E5E6")
+    ("atom-one-light-silver"        . "#EAEAEB")
+    ("atom-one-light-black"         . "#424243")
+    ("atom-one-light-ui-fg"         . "#424243")
+    ("atom-one-light-level-3-color" . "#EAEAEB")
+    ("atom-one-light-border"        . "#DBDBDC"))
   "List of Atom One Light colors.")
 
 (defmacro atom-one-light-with-color-variables (&rest body)
@@ -60,11 +71,13 @@
   `(fringe ((t (:background ,atom-one-light-bg))))
   `(region ((t (:background ,atom-one-light-gray))))
   `(highlight ((t (:background ,atom-one-light-gray))))
-  `(hl-line ((t (:background ,atom-one-light-bg-hl))))
-  `(vertical-border ((t (:foreground ,atom-one-light-mono-3))))
+  `(hl-line ((t (:background ,atom-one-light-bg-hl :distant-foreground unspecified))))
+  `(header-line ((t (:background ,atom-one-light-level-3-color))))
+  `(vertical-border ((t (:background ,atom-one-light-border :foreground ,atom-one-light-border))))
   `(secondary-selection ((t (:background ,atom-one-light-bg-1))))
   `(query-replace ((t (:inherit (isearch)))))
-  `(minibuffer-prompt ((t (:foreground ,atom-one-light-silver))))
+  `(minibuffer-prompt ((t (:foreground ,atom-one-light-ui-fg))))
+  `(tooltip ((t (:foreground ,atom-one-light-fg :background ,atom-one-light-bg-1 :inherit variable-pitch))))
 
   `(font-lock-builtin-face ((t (:foreground ,atom-one-light-cyan))))
   `(font-lock-comment-face ((t (:foreground ,atom-one-light-mono-3))))
@@ -80,10 +93,18 @@
   `(font-lock-warning-face ((t (:foreground ,atom-one-light-mono-3 :bold t))))
 
   ;; mode-line
-  `(mode-line ((t (:background ,atom-one-light-black :foreground ,atom-one-light-silver))))
+  `(mode-line ((t (:background ,atom-one-light-level-3-color :foreground ,atom-one-light-ui-fg :box (:color ,atom-one-light-border :line-width 1)))))
   `(mode-line-buffer-id ((t (:weight bold))))
   `(mode-line-emphasis ((t (:weight bold))))
-  `(mode-line-inactive ((t (:background ,atom-one-light-gray))))
+  `(mode-line-inactive ((t (:background ,atom-one-light-border :foreground ,atom-one-light-mono-3 :box (:color ,atom-one-light-border :line-width 1)))))
+
+  ;; window-divider
+  `(window-divider ((t (:foreground ,atom-one-light-border))))
+  `(window-divider-first-pixel ((t (:foreground ,atom-one-light-border))))
+  `(window-divider-last-pixel ((t (:foreground ,atom-one-light-border))))
+
+  ;; custom
+  `(custom-state ((t (:foreground ,atom-one-light-green))))
 
   ;; ido
   `(ido-first-match ((t (:foreground ,atom-one-light-purple :weight bold))))
@@ -107,6 +128,20 @@
   `(company-scrollbar-fg ((t (:background ,atom-one-light-mono-1))))
   `(company-scrollbar-bg ((t (:background ,atom-one-light-bg-1))))
 
+  ;; flyspell
+  `(flyspell-duplicate ((t (:underline (:color ,atom-one-light-warning :style wave)))))
+  `(flyspell-incorrect ((t (:underline (:color ,atom-one-light-error :style wave)))))
+
+  ;; flymake
+  `(flymake-error ((t (:underline (:color ,atom-one-light-error :style wave)))))
+  `(flymake-note ((t (:underline (:color ,atom-one-light-info :style wave)))))
+  `(flymake-warning ((t (:underline (:color ,atom-one-light-warning :style wave)))))
+
+  ;; flycheck
+  `(flycheck-error ((t (:underline (:color ,atom-one-light-error :style wave)))))
+  `(flycheck-info ((t (:underline (:color ,atom-one-light-info :style wave)))))
+  `(flycheck-warning ((t (:underline (:color ,atom-one-light-warning :style wave)))))
+
   ;; compilation
   `(compilation-face ((t (:foreground ,atom-one-light-fg))))
   `(compilation-line-number ((t (:foreground ,atom-one-light-mono-2))))
@@ -114,13 +149,13 @@
 
   ;; isearch
   `(isearch ((t (:foreground ,atom-one-light-bg :background ,atom-one-light-purple))))
-  `(isearch-fail ((t (:foreground ,atom-one-light-red-2 :background nil))))
+  `(isearch-fail ((t (:foreground ,atom-one-light-red-2 :background unspecified))))
   `(lazy-highlight ((t (:foreground ,atom-one-light-purple :background ,atom-one-light-bg-1 :underline ,atom-one-light-purple))))
 
   ;; diff-hl (https://github.com/dgutov/diff-hl)
-  '(diff-hl-change ((t (:foreground "#E9C062" :background "#8b733a"))))
-  '(diff-hl-delete ((t (:foreground "#CC6666" :background "#7a3d3d"))))
-  '(diff-hl-insert ((t (:foreground "#A8FF60" :background "#547f30"))))
+  `(diff-hl-change ((t (:foreground ,atom-one-light-change :background unspecified))))
+  `(diff-hl-delete ((t (:foreground ,atom-one-light-delete :background unspecified))))
+  `(diff-hl-insert ((t (:foreground ,atom-one-light-insert :background unspecified))))
 
   ;; dired-mode
   '(dired-directory ((t (:inherit (font-lock-keyword-face)))))
@@ -192,7 +227,7 @@
   `(magit-process-ng ((t (:foreground ,atom-one-light-red-1))))
   `(magit-log-author ((t (:foreground ,atom-one-light-orange-2))))
   `(magit-log-date ((t (:foreground ,atom-one-light-mono-2))))
-  `(magit-log-graph ((t (:foreground ,atom-one-light-silver))))
+  `(magit-log-graph ((t (:foreground ,atom-one-light-ui-fg))))
   `(magit-sequence-pick ((t (:foreground ,atom-one-light-orange-2))))
   `(magit-sequence-stop ((t (:foreground ,atom-one-light-green))))
   `(magit-sequence-part ((t (:foreground ,atom-one-light-orange-1))))
@@ -246,7 +281,7 @@
   `(rainbow-delimiters-depth-10-face ((t (:foreground ,atom-one-light-mono-1))))
   `(rainbow-delimiters-depth-11-face ((t (:foreground ,atom-one-light-mono-2))))
   `(rainbow-delimiters-depth-12-face ((t (:foreground ,atom-one-light-mono-3))))
-  `(rainbow-delimiters-unmatched-face ((t (:foreground ,atom-one-light-black))))
+  `(rainbow-delimiters-unmatched-face ((t (:foreground ,atom-one-light-ui-fg))))
 
   ;; rbenv
   `(rbenv-active-ruby-face ((t (:foreground ,atom-one-light-green))))
@@ -257,6 +292,14 @@
 
   ;; web-mode
   `(web-mode-symbol-face ((t (:foreground ,atom-one-light-orange-1))))
+
+  ;; linum
+  `(linum ((t (:foreground ,atom-one-light-gutter :background ,atom-one-light-bg))))
+  ;; hlinum
+  `(linum-highlight-face ((t (:foreground ,atom-one-light-fg :background ,atom-one-light-bg))))
+  ;; native line numbers (emacs version >=26)
+  `(line-number ((t (:foreground ,atom-one-light-gutter :background ,atom-one-light-bg))))
+  `(line-number-current-line ((t (:foreground ,atom-one-light-fg :background ,atom-one-light-bg))))
 
   ;; flx-ido
   '(flx-highlight-face ((t (:inherit (link) :weight bold))))
