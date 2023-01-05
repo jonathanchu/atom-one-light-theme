@@ -71,7 +71,7 @@
   `(fringe ((t (:background ,atom-one-light-bg))))
   `(region ((t (:background ,atom-one-light-gray))))
   `(highlight ((t (:background ,atom-one-light-gray))))
-  `(hl-line ((t (:background ,atom-one-light-bg-hl))))
+  `(hl-line ((t (:background ,atom-one-light-bg-hl :distant-foreground unspecified))))
   `(header-line ((t (:background ,atom-one-light-level-3-color))))
   `(vertical-border ((t (:background ,atom-one-light-border :foreground ,atom-one-light-border))))
   `(secondary-selection ((t (:background ,atom-one-light-bg-1))))
