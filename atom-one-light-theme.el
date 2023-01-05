@@ -22,6 +22,9 @@
     ("atom-one-light-bg-1"          . "#E5E5E6")  ;; MEBEE?
     ("atom-one-light-bg-hl"         . "#F0F0F1")
     ("atom-one-light-gutter"        . "#C2C2C3")
+    ("atom-one-light-insert"        . "#2DB448")
+    ("atom-one-light-change"        . "#F2A60D")
+    ("atom-one-light-delete"        . "#FF1414")
     ("atom-one-light-mono-1"        . "#383A42")
     ("atom-one-light-mono-2"        . "#696C77")
     ("atom-one-light-mono-3"        . "#A0A1A7")
@@ -122,9 +125,9 @@
   `(lazy-highlight ((t (:foreground ,atom-one-light-purple :background ,atom-one-light-bg-1 :underline ,atom-one-light-purple))))
 
   ;; diff-hl (https://github.com/dgutov/diff-hl)
-  '(diff-hl-change ((t (:foreground "#E9C062" :background "#8b733a"))))
-  '(diff-hl-delete ((t (:foreground "#CC6666" :background "#7a3d3d"))))
-  '(diff-hl-insert ((t (:foreground "#A8FF60" :background "#547f30"))))
+  `(diff-hl-change ((t (:foreground ,atom-one-light-change :background nil))))
+  `(diff-hl-delete ((t (:foreground ,atom-one-light-delete :background nil))))
+  `(diff-hl-insert ((t (:foreground ,atom-one-light-insert :background nil))))
 
   ;; dired-mode
   '(dired-directory ((t (:inherit (font-lock-keyword-face)))))
