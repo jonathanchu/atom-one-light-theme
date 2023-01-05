@@ -148,13 +148,13 @@
 
   ;; isearch
   `(isearch ((t (:foreground ,atom-one-light-bg :background ,atom-one-light-purple))))
-  `(isearch-fail ((t (:foreground ,atom-one-light-red-2 :background nil))))
+  `(isearch-fail ((t (:foreground ,atom-one-light-red-2 :background unspecified))))
   `(lazy-highlight ((t (:foreground ,atom-one-light-purple :background ,atom-one-light-bg-1 :underline ,atom-one-light-purple))))
 
   ;; diff-hl (https://github.com/dgutov/diff-hl)
-  `(diff-hl-change ((t (:foreground ,atom-one-light-change :background nil))))
-  `(diff-hl-delete ((t (:foreground ,atom-one-light-delete :background nil))))
-  `(diff-hl-insert ((t (:foreground ,atom-one-light-insert :background nil))))
+  `(diff-hl-change ((t (:foreground ,atom-one-light-change :background unspecified))))
+  `(diff-hl-delete ((t (:foreground ,atom-one-light-delete :background unspecified))))
+  `(diff-hl-insert ((t (:foreground ,atom-one-light-insert :background unspecified))))
 
   ;; dired-mode
   '(dired-directory ((t (:inherit (font-lock-keyword-face)))))
