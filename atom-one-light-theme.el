@@ -24,6 +24,10 @@
     ("atom-one-light-gutter"        . "#C2C2C3")
     ("atom-one-light-insert"        . "#2DB448")
     ("atom-one-light-change"        . "#F2A60D")
+    ("atom-one-light-info"          . "#1492FF")
+    ("atom-one-light-success"       . "#2DB448")
+    ("atom-one-light-warning"       . "#D5880B")
+    ("atom-one-light-error"         . "#F42A2A")
     ("atom-one-light-delete"        . "#FF1414")
     ("atom-one-light-mono-1"        . "#383A42")
     ("atom-one-light-mono-2"        . "#696C77")
@@ -113,6 +117,20 @@
   `(company-preview-common ((t (:foreground ,atom-one-light-orange-2 :background ,atom-one-light-bg))))
   `(company-scrollbar-fg ((t (:background ,atom-one-light-mono-1))))
   `(company-scrollbar-bg ((t (:background ,atom-one-light-bg-1))))
+
+  ;; flyspell
+  `(flyspell-duplicate ((t (:underline (:color ,atom-one-light-warning :style wave)))))
+  `(flyspell-incorrect ((t (:underline (:color ,atom-one-light-error :style wave)))))
+
+  ;; flymake
+  `(flymake-error ((t (:underline (:color ,atom-one-light-error :style wave)))))
+  `(flymake-note ((t (:underline (:color ,atom-one-light-info :style wave)))))
+  `(flymake-warning ((t (:underline (:color ,atom-one-light-warning :style wave)))))
+
+  ;; flycheck
+  `(flycheck-error ((t (:underline (:color ,atom-one-light-error :style wave)))))
+  `(flycheck-info ((t (:underline (:color ,atom-one-light-info :style wave)))))
+  `(flycheck-warning ((t (:underline (:color ,atom-one-light-warning :style wave)))))
 
   ;; compilation
   `(compilation-face ((t (:foreground ,atom-one-light-fg))))
