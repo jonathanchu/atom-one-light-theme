@@ -262,6 +262,14 @@
   ;; web-mode
   `(web-mode-symbol-face ((t (:foreground ,atom-one-light-orange-1))))
 
+  ;; linum
+  `(linum ((t (:foreground ,atom-one-light-gutter :background ,atom-one-light-bg))))
+  ;; hlinum
+  `(linum-highlight-face ((t (:foreground ,atom-one-light-fg :background ,atom-one-light-bg))))
+  ;; native line numbers (emacs version >=26)
+  `(line-number ((t (:foreground ,atom-one-light-gutter :background ,atom-one-light-bg))))
+  `(line-number-current-line ((t (:foreground ,atom-one-light-fg :background ,atom-one-light-bg))))
+
   ;; flx-ido
   '(flx-highlight-face ((t (:inherit (link) :weight bold))))
   ))
