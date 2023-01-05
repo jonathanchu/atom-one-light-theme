@@ -84,10 +84,10 @@
   `(font-lock-warning-face ((t (:foreground ,atom-one-light-mono-3 :bold t))))
 
   ;; mode-line
-  `(mode-line ((t (:background ,atom-one-light-level-3-color :foreground ,atom-one-light-ui-fg))))
+  `(mode-line ((t (:background ,atom-one-light-level-3-color :foreground ,atom-one-light-ui-fg :box (:color ,atom-one-light-border :line-width 1)))))
   `(mode-line-buffer-id ((t (:weight bold))))
   `(mode-line-emphasis ((t (:weight bold))))
-  `(mode-line-inactive ((t (:background ,atom-one-light-gray))))
+  `(mode-line-inactive ((t (:background ,atom-one-light-border :foreground ,atom-one-light-mono-3 :box (:color ,atom-one-light-border :line-width 1)))))
 
   ;; ido
   `(ido-first-match ((t (:foreground ,atom-one-light-purple :weight bold))))
