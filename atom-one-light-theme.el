@@ -68,7 +68,7 @@
   `(vertical-border ((t (:foreground ,atom-one-light-mono-3))))
   `(secondary-selection ((t (:background ,atom-one-light-bg-1))))
   `(query-replace ((t (:inherit (isearch)))))
-  `(minibuffer-prompt ((t (:foreground ,atom-one-light-silver))))
+  `(minibuffer-prompt ((t (:foreground ,atom-one-light-ui-fg))))
 
   `(font-lock-builtin-face ((t (:foreground ,atom-one-light-cyan))))
   `(font-lock-comment-face ((t (:foreground ,atom-one-light-mono-3))))
@@ -84,7 +84,7 @@
   `(font-lock-warning-face ((t (:foreground ,atom-one-light-mono-3 :bold t))))
 
   ;; mode-line
-  `(mode-line ((t (:background ,atom-one-light-black :foreground ,atom-one-light-silver))))
+  `(mode-line ((t (:background ,atom-one-light-level-3-color :foreground ,atom-one-light-ui-fg))))
   `(mode-line-buffer-id ((t (:weight bold))))
   `(mode-line-emphasis ((t (:weight bold))))
   `(mode-line-inactive ((t (:background ,atom-one-light-gray))))
@@ -196,7 +196,7 @@
   `(magit-process-ng ((t (:foreground ,atom-one-light-red-1))))
   `(magit-log-author ((t (:foreground ,atom-one-light-orange-2))))
   `(magit-log-date ((t (:foreground ,atom-one-light-mono-2))))
-  `(magit-log-graph ((t (:foreground ,atom-one-light-silver))))
+  `(magit-log-graph ((t (:foreground ,atom-one-light-ui-fg))))
   `(magit-sequence-pick ((t (:foreground ,atom-one-light-orange-2))))
   `(magit-sequence-stop ((t (:foreground ,atom-one-light-green))))
   `(magit-sequence-part ((t (:foreground ,atom-one-light-orange-1))))
@@ -250,7 +250,7 @@
   `(rainbow-delimiters-depth-10-face ((t (:foreground ,atom-one-light-mono-1))))
   `(rainbow-delimiters-depth-11-face ((t (:foreground ,atom-one-light-mono-2))))
   `(rainbow-delimiters-depth-12-face ((t (:foreground ,atom-one-light-mono-3))))
-  `(rainbow-delimiters-unmatched-face ((t (:foreground ,atom-one-light-black))))
+  `(rainbow-delimiters-unmatched-face ((t (:foreground ,atom-one-light-ui-fg))))
 
   ;; rbenv
   `(rbenv-active-ruby-face ((t (:foreground ,atom-one-light-green))))
