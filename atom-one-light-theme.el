@@ -72,10 +72,11 @@
   `(region ((t (:background ,atom-one-light-gray))))
   `(highlight ((t (:background ,atom-one-light-gray))))
   `(hl-line ((t (:background ,atom-one-light-bg-hl))))
-  `(vertical-border ((t (:foreground ,atom-one-light-mono-3))))
+  `(vertical-border ((t (:background ,atom-one-light-border :foreground ,atom-one-light-border))))
   `(secondary-selection ((t (:background ,atom-one-light-bg-1))))
   `(query-replace ((t (:inherit (isearch)))))
   `(minibuffer-prompt ((t (:foreground ,atom-one-light-ui-fg))))
+  `(tooltip ((t (:foreground ,atom-one-light-fg :background ,atom-one-light-bg-1 :inherit variable-pitch))))
 
   `(font-lock-builtin-face ((t (:foreground ,atom-one-light-cyan))))
   `(font-lock-comment-face ((t (:foreground ,atom-one-light-mono-3))))
@@ -95,6 +96,14 @@
   `(mode-line-buffer-id ((t (:weight bold))))
   `(mode-line-emphasis ((t (:weight bold))))
   `(mode-line-inactive ((t (:background ,atom-one-light-border :foreground ,atom-one-light-mono-3 :box (:color ,atom-one-light-border :line-width 1)))))
+
+  ;; window-divider
+  `(window-divider ((t (:foreground ,atom-one-light-border))))
+  `(window-divider-first-pixel ((t (:foreground ,atom-one-light-border))))
+  `(window-divider-last-pixel ((t (:foreground ,atom-one-light-border))))
+
+  ;; custom
+  `(custom-state ((t (:foreground ,atom-one-light-green))))
 
   ;; ido
   `(ido-first-match ((t (:foreground ,atom-one-light-purple :weight bold))))
